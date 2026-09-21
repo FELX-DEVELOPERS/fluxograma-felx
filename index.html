@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FELX - Guia Interativo de Suporte Técnico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            felx: {
+              teal: '#42B8C6',
+              tealHover: '#33A5B3',
+              tealLight: '#E6F8FA',
+              tealMuted: 'rgba(66, 184, 198, 0.15)',
+              petrolDarkest: '#091317',
+              petrolDarker: '#0D1B21',
+              petrolCard: '#13262F',
+              petrolHover: '#18313C',
+              petrolBorder: '#1F3C48',
+              petrolBorderLight: '#284C5C',
+              mint: '#34D399',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #091317;
+    }
+    /* Custom subtle scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0D1B21;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1F3C48;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #42B8C6;
+    }
+  </style>
+</head>
+<body class="bg-felx-petrolDarkest text-slate-100 min-h-screen flex flex-col antialiased">
+
+  <!-- Top Header with FELX Brand -->
+  <header class="border-b border-felx-petrolBorder bg-felx-petrolDarker/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Brand Logo & Title -->
+      <div class="flex items-center gap-3.5">
+        <svg class="w-10 h-10" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="120" height="120" rx="26" fill="#13262F" />
+          <path d="M60 20C40.67 20 25 35.67 25 55C25 64.67 28.93 73.44 35.29 79.77L30 100L50.48 94.66C53.51 95.53 56.69 96 60 96C79.33 96 95 80.33 95 61C95 41.67 79.33 20 60 20Z" fill="#42B8C6"/>
+          <!-- FELX typography emblem inside speech bubble -->
+          <path d="M48 42H72V49H56V57H68V64H56V74H48V42Z" fill="#091317" />
+          <rect x="42" y="58" width="18" height="6" rx="2" fill="#13262F"/>
+        </svg>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold tracking-wider text-white">FELX</span>
+            <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-felx-tealMuted text-felx-teal border border-felx-teal/30">Suporte 360°</span>
+          </div>
+          <p class="text-[11px] font-medium tracking-widest text-slate-400 uppercase">Guia Interativo de Atendimento</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Pill -->
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-felx-tealMuted text-felx-teal border border-felx-teal/30">
+          <span class="w-2 h-2 rounded-full bg-felx-teal animate-pulse"></span>
+          Fluxograma Completo Ativo
+        </span>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full space-y-6">
+
+    <!-- Operational Reminder Banner -->
+    <div class="p-3.5 rounded-xl bg-felx-petrolCard/70 border border-felx-petrolBorder flex flex-wrap items-center justify-between gap-3 text-xs">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2 h-2 rounded-full bg-felx-teal"></span>
+        <span class="text-slate-300">Fluxos mapeados:</span>
+        <span class="font-semibold text-felx-teal">Lentidão · Sem Conexão · Quedas · Alcance Wi-Fi · Alterações na Rede · Cancelamento / Outras</span>
+      </div>
+      <div class="text-[11px] text-slate-400 flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        Sempre verifique Massivas e Avisos no UPSoft antes de iniciar a triagem.
+      </div>
+    </div>
+
+    <!-- GUIA INTERATIVO COMPLETO -->
+    <section class="space-y-6">
+      
+      <!-- Top Control Bar -->
+      <div class="bg-felx-petrolDarker border border-felx-petrolBorder rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold uppercase text-felx-teal tracking-wider">Saltar para Assunto:</span>
+          <select id="quickRouteSelect" onchange="jumpToRoute(this.value)" class="bg-felx-petrolCard border border-felx-petrolBorder text-slate-200 text-xs rounded-lg px-3 py-2 focus:outline-none focus:border-felx-teal transition-colors">
+            <option value="start">1. Início (Saudação & Cadastro)</option>
+            <option value="selecao_demanda">2. Seleção de Demanda (Menu Principal)</option>
+            <option value="lentidao_root">🐢 Lentidão na Conexão</option>
+            <option value="sem_conexao_root">🔌 Sem Conexão (Internet Parada)</option>
+            <option value="quedas_root">📉 Quedas Constantes / Instabilidade</option>
+            <option value="alcance_root">📶 Problemas no Alcance (Sinal Wi-Fi)</option>
+            <option value="alteracoes_root">⚙️ Alterações na Rede (SSID / Senha)</option>
+            <option value="outras_root">📂 Outras Demandas / Cancelamento</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="undoStep()" id="undoBtn" class="hidden px-3.5 py-2 rounded-lg bg-felx-petrolCard hover:bg-felx-petrolHover text-slate-300 border border-felx-petrolBorder text-xs flex items-center gap-1.5 transition-colors">
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            Voltar Passo
+          </button>
+          <button onclick="resetSimulator()" class="px-3.5 py-2 rounded-lg bg-felx-petrolCard hover:bg-felx-petrolHover text-slate-300 border border-felx-petrolBorder text-xs flex items-center gap-1.5 transition-colors">
+            <svg class="w-3.5 h-3.5 text-felx-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Reiniciar Atendimento
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Step Interactive Box -->
+      <div class="bg-felx-petrolDarker border border-felx-petrolBorder rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+        
+        <!-- Decorative background glow -->
+        <div class="absolute -top-24 -right-24 w-72 h-72 bg-felx-teal/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div id="simStepContainer" class="space-y-6 relative z-10">
+          <!-- Dynamic rendering by JS -->
+        </div>
+
+        <!-- Real-time Ticket History -->
+        <div id="simHistoryContainer" class="mt-8 pt-6 border-t border-felx-petrolBorder">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+              <svg class="w-4 h-4 text-felx-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              Trilha de Decisões Percorridas
+            </h4>
+            <span id="stepCounter" class="text-[11px] font-mono text-slate-400">Etapas: 0</span>
+          </div>
+
+          <div id="simHistoryEmpty" class="text-xs text-slate-500 italic py-2">
+            Nenhuma decisão tomada ainda. Selecione uma opção acima para iniciar o percurso.
+          </div>
+          <ol id="simHistoryList" class="space-y-2 text-xs text-slate-300 list-decimal list-inside"></ol>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    /* ==========================================================================
+       FELX FULL SUPPORT STATE MACHINE (FLUXOGRAMA SUPORTE COMPLETO)
+       ========================================================================== */
+    const stepsData = {
+      // 1. Início Geral & Cadastro
+      start: {
+        tag: "Início & Recepção",
+        title: "Saudação e Validação de Cadastro",
+        question: "O cliente iniciou o atendimento. Realize a Saudação Automática e a Validação Cadastral. O atendimento já consta registrado no cadastro correto?",
+        tip: "OBS.: Se o UPCHAT abriu em cadastro errado, encerre com o diagnóstico 'ATENDIMENTO ABERTO ERRONEAMENTE' e abra no cadastro correto no UPSoft.",
+        options: [
+          { text: "Sim, cadastro validado e correto", target: "selecao_demanda" },
+          { text: "Não / múltiplos cadastros ativos", target: "start_logins_ativos" }
+        ]
+      },
+      start_logins_ativos: {
+        tag: "Triagem Cadastral",
+        title: "Conferência de Logins Ativos",
+        question: "Verifique os logins ativos no sistema UPSoft e confirme com o cliente para qual ponto/endereço será prestado o suporte.",
+        options: [
+          { text: "Endereço e login identificados com sucesso", target: "selecao_demanda" }
+        ]
+      },
+
+      // 2. Menu Principal de Demandas
+      selecao_demanda: {
+        tag: "Diagnóstico da Demanda",
+        title: "Qual é o Assunto Principal do Atendimento?",
+        question: "Identifique a solicitação informada pelo cliente para direcionar a trilha correta:",
+        options: [
+          { text: "🐢 Lentidão na Conexão", target: "lentidao_root" },
+          { text: "🔌 Sem Conexão (Totalmente sem internet)", target: "sem_conexao_root" },
+          { text: "📉 Quedas Constantes / Instabilidade", target: "quedas_root" },
+          { text: "📶 Problemas no Alcance (Sinal Wi-Fi Fraco)", target: "alcance_root" },
+          { text: "⚙️ Alterações na Rede (Troca de Nome/Senha/Configurações)", target: "alteracoes_root" },
+          { text: "📂 Outras Demandas / Solicitação de Cancelamento", target: "outras_root" }
+        ]
+      },
+
+      /* ==========================================================================
+         MÓDULO: LENTIDÃO
+         ========================================================================== */
+      lentidao_root: {
+        tag: "Lentidão",
+        title: "Verificação de Redução de Velocidade",
+        question: "O cliente está com Redução de Velocidade por pendência financeira no UPSoft?",
+        options: [
+          { text: "Sim, consta Redução de Velocidade", target: "lentidao_red_liberar" },
+          { text: "Não, velocidade normal no cadastro", target: "lentidao_check_protocolo" }
+        ]
+      },
+      lentidao_red_liberar: {
+        tag: "Lentidão / Financeiro",
+        title: "Direito à Liberação Provisória",
+        question: "De acordo com o Manual do Provedor, o cliente tem direito à Liberação Provisória (promessa de pagamento)?",
+        tip: "Verifique na Wiki se este provedor permite liberação automática ou apenas mediante comprovante anexado.",
+        options: [
+          { text: "Sim, podemos liberar", target: "lentidao_exec_lib" },
+          { text: "Não podemos liberar", target: "desfecho_financeiro_orientar" }
+        ]
+      },
+      lentidao_exec_lib: {
+        tag: "Lentidão / Financeiro",
+        title: "Execução da Liberação",
+        question: "A liberação foi executada no sistema UPSoft. Ocorreu com sucesso?",
+        options: [
+          { text: "Sim, liberado com sucesso", target: "desfecho_liberado_fatura" },
+          { text: "Não, ocorreu falha ou bloqueio", target: "desfecho_supervisao_financeiro" }
+        ]
+      },
+      lentidao_check_protocolo: {
+        tag: "Lentidão / Histórico",
+        title: "Verificação de Protocolo Existente",
+        question: "O cliente já possui Protocolo / Ordem de Serviço aberta recente sobre este caso?",
+        options: [
+          { text: "Sim, já possui protocolo em aberto", target: "lentidao_os_andamento" },
+          { text: "Não possui protocolo em andamento", target: "lentidao_procedimento_ident" }
+        ]
+      },
+      lentidao_os_andamento: {
+        tag: "Lentidão / O.S.",
+        title: "Status do Protocolo",
+        question: "Verifique o atendimento/O.S. em aberto no UPSoft. A demanda já foi encaminhada para a equipe técnica?",
+        options: [
+          { text: "Sim, já está encaminhada", target: "desfecho_orientar_prazo_os" },
+          { text: "Não encaminhada / parada", target: "lentidao_procedimento_ident" }
+        ]
+      },
+      lentidao_procedimento_ident: {
+        tag: "Lentidão / Diagnóstico",
+        title: "Procedimento: Identificação da Lentidão",
+        question: "Envie o atalho <code>/lentidao</code>. A lentidão é GERAL (em todos os dispositivos, sites e apps ao mesmo tempo)?",
+        options: [
+          { text: "Sim, é Geral em toda a residência", target: "lentidao_potencia" },
+          { text: "Não, ocorre em dispositivo ou site específico", target: "lentidao_check_tvbox" }
+        ]
+      },
+      lentidao_potencia: {
+        tag: "Lentidão / Fibra",
+        title: "Verificação da Potência Óptica",
+        question: "No UPSoft, clique em 'Verificar Fibra'. A Potência Óptica (RX/TX) está inadequada / fora do padrão tolerado?",
+        options: [
+          { text: "Sim, potência inadequada (alta atenuação)", target: "desfecho_n3_potencia" },
+          { text: "Não, potência óptica está normal", target: "lentidao_reinicio" }
+        ]
+      },
+      lentidao_reinicio: {
+        tag: "Lentidão / Hardware",
+        title: "Reinício dos Equipamentos",
+        question: "Oriente o cliente com o atalho <code>/reinicio</code> (retirar da tomada por 30s direto da fonte). Após o retorno, a lentidão normalizou?",
+        options: [
+          { text: "Sim, conexão normalizada!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, continua lenta", target: "lentidao_teste_velocidade" }
+        ]
+      },
+      lentidao_teste_velocidade: {
+        tag: "Lentidão / Medição",
+        title: "Teste de Velocidade Homologado",
+        question: "Envie o atalho <code>/teste</code> e instrua o teste preferencialmente via cabo de rede ou na rede 5GHz bem próximo à ONT. A velocidade atingiu o contratado?",
+        options: [
+          { text: "Sim, teste ok / normalizado", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, taxa continua abaixo do plano", target: "lentidao_acesso_remoto" }
+        ]
+      },
+      lentidao_acesso_remoto: {
+        tag: "Lentidão / Configuração Remota",
+        title: "Acesso Remoto: DNS, Canais e Largura",
+        question: "Efetue o Acesso Remoto ao roteador/ONT. Altere o DNS para 8.8.8.8 / 1.1.1.1, ajuste a largura em 20MHz (2.4GHz) e canal menos congestionado. Realizado novo teste, normalizou?",
+        tip: "Anote todos os canais anteriores, uptime e DNS na descrição do atendimento.",
+        options: [
+          { text: "Sim, normalizou após os ajustes!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não normalizou / continua lento", target: "desfecho_n2_lentidao" }
+        ]
+      },
+      lentidao_check_tvbox: {
+        tag: "Lentidão Específica",
+        title: "Ocorrência em TVBox",
+        question: "A lentidão ocorre especificamente em aparelho de TVBox / IPTV?",
+        options: [
+          { text: "Sim, ocorre em TVBox", target: "tvbox_suporte_check" },
+          { text: "Não, ocorre em um site ou app específico", target: "lentidao_check_site" }
+        ]
+      },
+      tvbox_suporte_check: {
+        tag: "Lentidão / TVBox",
+        title: "Política do Provedor para TVBox",
+        question: "Consulte a Wiki do Provedor: Este provedor presta suporte a esse modelo/tipo de TVBox?",
+        options: [
+          { text: "Sim, presta suporte", target: "tvbox_orientacoes_manual" },
+          { text: "Não presta suporte a TVBox pirata/não homologada", target: "desfecho_tvbox_anatel" }
+        ]
+      },
+      tvbox_orientacoes_manual: {
+        tag: "Lentidão / TVBox",
+        title: "Orientações do Manual para TVBox",
+        question: "Verifique e execute as orientações do manual do provedor para TVBox. O serviço normalizou?",
+        options: [
+          { text: "Sim, TVBox funcionando perfeitamente", target: "desfecho_normalizado_sucesso" },
+          { text: "Não normalizou", target: "desfecho_tvbox_chamado" }
+        ]
+      },
+      lentidao_check_site: {
+        tag: "Lentidão / Sites",
+        title: "Ocorrência em Site Específico",
+        question: "A lentidão ou falha de carregamento ocorre apenas em um site ou jogo específico?",
+        options: [
+          { text: "Sim, em um site específico", target: "site_instabilidade_externa" },
+          { text: "Não, afeta múltiplos sites (voltar para geral)", target: "lentidao_potencia" }
+        ]
+      },
+      site_instabilidade_externa: {
+        tag: "Lentidão / Site Específico",
+        title: "Conferência de Instabilidade Externa",
+        question: "Consulte o DownDetector ou faça teste externo: O site ou plataforma em questão está instável ou fora do ar nacionalmente/mundialmente?",
+        options: [
+          { text: "Sim, site instável externamente", target: "desfecho_site_instavel_externo" },
+          { text: "Não, o site está operando normalmente para os demais", target: "site_dns_remoto" }
+        ]
+      },
+      site_dns_remoto: {
+        tag: "Lentidão / DNS",
+        title: "Acesso Remoto para DNS",
+        question: "Acesse o equipamento remotamente e configure servidores de DNS públicos confiáveis (ex: 8.8.8.8 / 1.1.1.1). Testou novamente, normalizou?",
+        options: [
+          { text: "Sim, normalizado!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, continua lento no site", target: "desfecho_n2_site" }
+        ]
+      },
+
+      /* ==========================================================================
+         MÓDULO: SEM CONEXÃO
+         ========================================================================== */
+      sem_conexao_root: {
+        tag: "Sem Conexão",
+        title: "Verificação de Bloqueio Financeiro",
+        question: "O cliente consta com Bloqueio Financeiro (corte total da conexão) no UPSoft?",
+        options: [
+          { text: "Sim, está com Bloqueio Financeiro", target: "sem_conexao_bloq_liberar" },
+          { text: "Não, status financeiro está regular", target: "sem_conexao_check_protocolo" }
+        ]
+      },
+      sem_conexao_bloq_liberar: {
+        tag: "Sem Conexão / Financeiro",
+        title: "Permissão de Liberação Provisória",
+        question: "Conforme o Manual do Provedor, podemos realizar a liberação provisória desta conexão?",
+        options: [
+          { text: "Sim, podemos liberar", target: "sem_conexao_exec_lib" },
+          { text: "Não podemos liberar", target: "desfecho_financeiro_orientar" }
+        ]
+      },
+      sem_conexao_exec_lib: {
+        tag: "Sem Conexão / Financeiro",
+        title: "Execução da Liberação",
+        question: "Liberação provisória realizada no sistema. Ocorreu com sucesso e o login restabeleceu?",
+        options: [
+          { text: "Sim, liberado com sucesso", target: "desfecho_liberado_fatura" },
+          { text: "Não, falha na liberação", target: "desfecho_supervisao_financeiro" }
+        ]
+      },
+      sem_conexao_check_protocolo: {
+        tag: "Sem Conexão / Histórico",
+        title: "Conferência de Protocolos",
+        question: "O cliente já possui Protocolo ou O.S. aberta para falta de conexão?",
+        options: [
+          { text: "Sim, já possui protocolo", target: "sem_conexao_os_andamento" },
+          { text: "Não possui protocolo aberto", target: "sem_conexao_login_status" }
+        ]
+      },
+      sem_conexao_os_andamento: {
+        tag: "Sem Conexão / O.S.",
+        title: "Status da Demanda Aberta",
+        question: "Verifique o atendimento em aberto. A demanda já se encontra encaminhada para a equipe técnica de campo?",
+        options: [
+          { text: "Sim, já está encaminhada", target: "desfecho_orientar_prazo_os" },
+          { text: "Não encaminhada / sem andamento", target: "sem_conexao_login_status" }
+        ]
+      },
+      sem_conexao_login_status: {
+        tag: "Sem Conexão / Sistema",
+        title: "Status do Login no UPSoft",
+        question: "Verifique no UPSoft: O Login PPPoE/IPoE do cliente consta como CONECTADO?",
+        tip: "Atenção: Se estiver Conectado mas o cliente relata sem internet, pode ser DNS, CPE travado ou falta de rota.",
+        options: [
+          { text: "Login CONECTADO no UPSoft", target: "sem_conexao_login_conectado" },
+          { text: "Login DESCONECTADO no UPSoft", target: "sem_conexao_solicitar_video" }
+        ]
+      },
+      sem_conexao_login_conectado: {
+        tag: "Sem Conexão / Conectado",
+        title: "Reinício com Login Ativo",
+        question: "Execute: Reinício dos Equipamentos com o atalho <code>/reinicio</code>. A conexão normalizou?",
+        options: [
+          { text: "Sim, conexão normalizada!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não normalizou", target: "sem_conexao_remoto_dns_cpe" }
+        ]
+      },
+      sem_conexao_remoto_dns_cpe: {
+        tag: "Sem Conexão / Remoto",
+        title: "Acesso Remoto: DNS e Status do CPE",
+        question: "Efetue o Acesso Remoto para conferência de DNS, gateway e status de conexão do CPE. Normalizou?",
+        options: [
+          { text: "Sim, voltou a navegar!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não normalizou / sem navegação", target: "sem_conexao_solicitar_video" }
+        ]
+      },
+      sem_conexao_solicitar_video: {
+        tag: "Sem Conexão / Diagnóstico Visual",
+        title: "Procedimento: Solicitação de Vídeo/Foto",
+        question: "Envie o atalho <code>/video</code> solicitando uma foto ou vídeo nítido dos LEDs do roteador/ONT. O LED LOS (Link Loss) está aceso em vermelho ou piscando?",
+        tip: "OBS.: O LED PON ou AUTH só aparece em ONUs/ONTs. Link Loss significa rompimento físico na fibra.",
+        options: [
+          { text: "Sim, Link Loss / LOS vermelho", target: "desfecho_n3_linkloss" },
+          { text: "Não tem LOS vermelho", target: "sem_conexao_check_pon" }
+        ]
+      },
+      sem_conexao_check_pon: {
+        tag: "Sem Conexão / LEDs",
+        title: "LED PON Piscando?",
+        question: "O LED PON ou AUTH está piscando continuamente (tentando sincronizar sem sucesso)?",
+        options: [
+          { text: "Sim, PON piscando", target: "desfecho_n3_pon" },
+          { text: "Não, PON está normal ou apagado", target: "sem_conexao_check_luz_vermelha" }
+        ]
+      },
+      sem_conexao_check_luz_vermelha: {
+        tag: "Sem Conexão / Roteador",
+        title: "Luz Vermelha no Roteador Secundário?",
+        question: "Há alguma luz vermelha (geralmente LED de Internet/WAN) acesa no roteador?",
+        options: [
+          { text: "Sim, luz vermelha na porta Internet/WAN", target: "sem_conexao_conferencia_cabos" },
+          { text: "Não há luz vermelha", target: "sem_conexao_check_apagado" }
+        ]
+      },
+      sem_conexao_conferencia_cabos: {
+        tag: "Sem Conexão / Cabos",
+        title: "Conferência dos Cabos de Rede",
+        question: "Oriente o cliente a conferir os cabos de rede: O cabo que sai da porta LAN da ONU deve estar conectado firmemente na porta WAN do Roteador. Ajustado isso, normalizou?",
+        options: [
+          { text: "Sim, cabo invertido corrigido e normalizado!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, cabos corretos e continua sem conexão", target: "desfecho_n3_cabos" }
+        ]
+      },
+      sem_conexao_check_apagado: {
+        tag: "Sem Conexão / Energia",
+        title: "Equipamento Totalmente Apagado?",
+        question: "O equipamento está completamente apagado (nenhum LED aceso)?",
+        options: [
+          { text: "Sim, equipamento totalmente apagado", target: "sem_conexao_fonte_botao" },
+          { text: "Não, possui LEDs acesos", target: "sem_conexao_check_reset" }
+        ]
+      },
+      sem_conexao_fonte_botao: {
+        tag: "Sem Conexão / Hardware",
+        title: "Conferência de Fonte e Botão",
+        question: "Utilize o atalho <code>/aparelhoQueimado</code>. Oriente conferir o botão Power atrás do roteador e testar a fonte em outra tomada funcional. O aparelho ligou e normalizou?",
+        options: [
+          { text: "Sim, ligou e normalizou!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não liga de jeito nenhum (possível fonte/aparelho queimado)", target: "desfecho_n3_queimado" }
+        ]
+      },
+      sem_conexao_check_reset: {
+        tag: "Sem Conexão / Wi-Fi",
+        title: "Verificação de Reset do Equipamento",
+        question: "Utilize o atalho <code>/nomeWifi</code>. A rede Wi-Fi está com o nome padrão de fábrica (ex: TP-Link_XXXX, Mercusys, ZTE) indicando que foi resetado?",
+        tip: "Atenção: Se a rede sumiu totalmente, pode estar apenas desligada via botão físico Wi-Fi do roteador.",
+        options: [
+          { text: "Sim, equipamento foi RESETADO", target: "sem_conexao_reconfiguracao" },
+          { text: "Não, continua com o nome correto ou sem alteração de fábrica", target: "sem_conexao_ja_reiniciou" }
+        ]
+      },
+      sem_conexao_reconfiguracao: {
+        tag: "Sem Conexão / Reconfiguração",
+        title: "Orientação para Reconfiguração",
+        question: "Verifique na Wiki: O manual do provedor autoriza a reconfiguração remota/guiada com o atalho <code>/reset</code>? O cliente conseguiu reconfigurar e normalizar?",
+        options: [
+          { text: "Sim, reconfigurado com sucesso!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não conseguiu ou manual exige técnico presencial", target: "desfecho_n3_reset" }
+        ]
+      },
+      sem_conexao_ja_reiniciou: {
+        tag: "Sem Conexão / Reinício",
+        title: "O Equipamento Já Foi Reiniciado?",
+        question: "O cliente já reiniciou os equipamentos retirando diretamente da tomada por 30 segundos neste atendimento?",
+        tip: "Se todas as luzes verdes estiverem FIXAS, o equipamento travou e precisa obrigatoriamente do reinício da tomada.",
+        options: [
+          { text: "Sim, já foi reiniciado e não resolveu", target: "desfecho_n2_sem_conexao" },
+          { text: "Não, ainda não reiniciou", target: "sem_conexao_executar_reinicio" }
+        ]
+      },
+      sem_conexao_executar_reinicio: {
+        tag: "Sem Conexão / Teste",
+        title: "Executar Reinício dos Equipamentos",
+        question: "Instrua o reinício com o atalho <code>/reinicio</code>. Aguarde a subida dos LEDs (aprox. 3 minutos). A conexão subiu?",
+        options: [
+          { text: "Sim, conexão normalizada!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não normalizou", target: "desfecho_n2_sem_conexao" }
+        ]
+      },
+
+      /* ==========================================================================
+         MÓDULO: QUEDAS CONSTANTES
+         ========================================================================== */
+      quedas_root: {
+        tag: "Quedas Constantes",
+        title: "Verificação de Redução de Velocidade",
+        question: "O cliente possui Redução de Velocidade que possa estar gerando intermitência de sessão?",
+        options: [
+          { text: "Sim, consta redução financeira", target: "lentidao_red_liberar" },
+          { text: "Não consta redução", target: "quedas_check_protocolo" }
+        ]
+      },
+      quedas_check_protocolo: {
+        tag: "Quedas / Histórico",
+        title: "Verificação de Protocolos Abertos",
+        question: "O cliente já tem protocolo aberto de quedas/instabilidade?",
+        options: [
+          { text: "Sim, protocolo já aberto", target: "quedas_os_andamento" },
+          { text: "Não tem protocolo", target: "quedas_relatorio" }
+        ]
+      },
+      quedas_os_andamento: {
+        tag: "Quedas / O.S.",
+        title: "Demanda Já Encaminhada?",
+        question: "A demanda aberta já foi encaminhada para a equipe técnica?",
+        options: [
+          { text: "Sim, já está encaminhada", target: "desfecho_orientar_prazo_os" },
+          { text: "Não encaminhada", target: "quedas_relatorio" }
+        ]
+      },
+      quedas_relatorio: {
+        tag: "Quedas / UPSoft",
+        title: "Verificação do Relatório de Quedas",
+        question: "Consulte o Relatório de Quedas/Desconexões no UPSoft. Há registro de QUEDAS CONSTANTES no sistema (ex: 3 ou mais quedas com horário_inicio e horário_fim no mesmo dia)?",
+        tip: "Atenção: Quedas somente em horários programados (ex: 00h) podem ser reinício agendado no roteador.",
+        options: [
+          { text: "Sim, quedas constantes confirmadas em log", target: "quedas_potencia" },
+          { text: "Não constam quedas no log do sistema (quedas só no Wi-Fi)", target: "quedas_reinicio" }
+        ]
+      },
+      quedas_potencia: {
+        tag: "Quedas / Fibra",
+        title: "Verificação da Potência Óptica",
+        question: "Verifique a Potência Óptica no UPSoft. A fibra apresenta potência inadequada ou oscilação brusca?",
+        options: [
+          { text: "Sim, potência óptica inadequada", target: "desfecho_n3_potencia" },
+          { text: "Não, sinal óptico está estável", target: "quedas_reinicio" }
+        ]
+      },
+      quedas_reinicio: {
+        tag: "Quedas / Reinício",
+        title: "Reinício dos Equipamentos",
+        question: "Envie o atalho <code>/reinicio</code>. A tratativa de quedas pode ser subjetiva no momento do atendimento. O cliente concordou em monitorar após os procedimentos?",
+        tip: "Oriente que os procedimentos efetuados no sistema provavelmente corrigiram a causa e peça para monitorar.",
+        options: [
+          { text: "Sim, cliente compreendeu e vai monitorar", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, cliente insatisfeito / problema crítico contínuo", target: "desfecho_n2_quedas" }
+        ]
+      },
+
+      /* ==========================================================================
+         MÓDULO: PROBLEMAS NO ALCANCE (SINAL WI-FI)
+         ========================================================================== */
+      alcance_root: {
+        tag: "Problemas no Alcance",
+        title: "Verificação Financeira e Protocolar",
+        question: "O cliente possui redução de velocidade ou chamado recente em andamento?",
+        options: [
+          { text: "Sim, possui redução financeira", target: "lentidao_red_liberar" },
+          { text: "Sim, possui chamado aberto já encaminhado", target: "desfecho_orientar_prazo_os" },
+          { text: "Não, seguir diagnóstico de cobertura", target: "alcance_entendimento" }
+        ]
+      },
+      alcance_entendimento: {
+        tag: "Alcance / Diagnóstico",
+        title: "Entendimento do Problema no Alcance",
+        question: "Diagnostique a residência (ex: casa com vários andares, barreiras, cômodos distantes). O cliente está conectado na REDE ADEQUADA (2.4GHz para distância vs 5GHz para proximidade)?",
+        options: [
+          { text: "Não está na rede correta", target: "alcance_orientar_rede" },
+          { text: "Sim, já está na rede adequada (2.4GHz para distância)", target: "alcance_remoto_config" }
+        ]
+      },
+      alcance_orientar_rede: {
+        tag: "Alcance / 2.4 vs 5GHz",
+        title: "Orientação para Testar na Rede Correta",
+        question: "Oriente o cliente com o atalho <code>/redesWifi</code> sobre a diferença de frequências. Testando na frequência apropriada para a distância, normalizou?",
+        options: [
+          { text: "Sim, normalizou na frequência correta!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, continua com sinal fraco no local", target: "alcance_remoto_config" }
+        ]
+      },
+      alcance_remoto_config: {
+        tag: "Alcance / Otimização Remota",
+        title: "Acesso Remoto: Canal e Largura de Banda",
+        question: "Acesse remotamente e configure a rede 2.4GHz em 20MHz de Largura de Banda para menor interferência, selecionando o melhor canal via Site Survey. Normalizou?",
+        options: [
+          { text: "Sim, alcance e estabilidade melhoraram!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, local continua sem cobertura suficiente", target: "alcance_check_mesh" }
+        ]
+      },
+      alcance_check_mesh: {
+        tag: "Alcance / Repetidores",
+        title: "Provedor Oferece Rede Mesh ou Ponto Extra?",
+        question: "Consulte na Wiki o tópico 'Provedor oferece suporte a repetidores / Rede Mesh?': O provedor comercializa ou fornece equipamentos de expansão?",
+        options: [
+          { text: "Sim, provedor oferece soluções de Mesh/Repetidor", target: "desfecho_alcance_encaminhar_mesh" },
+          { text: "Não oferece soluções de ampliação de rede", target: "alcance_solucoes_alternativas" }
+        ]
+      },
+      alcance_solucoes_alternativas: {
+        tag: "Alcance / Orientações",
+        title: "Orientação sobre Saídas Alternativas",
+        question: "Oriente o cliente sobre alternativas (cabeamento de TV distante, compra particular de repetidor ou Mudança de Ponto da ONT). O cliente compreendeu e ficou satisfeito?",
+        options: [
+          { text: "Sim, cliente compreendeu e aceitou a solução", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, cliente insatisfeito / insiste em solução técnica", target: "desfecho_alcance_acionar_recado" }
+        ]
+      },
+
+      /* ==========================================================================
+         MÓDULO: ALTERAÇÕES NA REDE
+         ========================================================================== */
+      alteracoes_root: {
+        tag: "Alterações na Rede",
+        title: "Tipo de Alteração Solicitada",
+        question: "Qual é o tipo de alteração solicitada pelo cliente na rede dele?",
+        options: [
+          { text: "Troca de SSID (Nome do Wi-Fi) ou Senha", target: "alt_troca_senha" },
+          { text: "Configurações Avançadas (Controle dos Pais, MAC, Horários)", target: "alt_config_avancadas" }
+        ]
+      },
+      alt_troca_senha: {
+        tag: "Alterações / Senha",
+        title: "Questionar Nome/Senha e Verificar Acesso Remoto",
+        question: "Questione o nome e senha desejados pelo cliente. É possível efetuar o ACESSO REMOTO ao equipamento agora?",
+        tip: "Atenção: Se o login estiver Desconectado no UPSoft, o acesso remoto para alteração de senha é inviável; trate a conexão antes.",
+        options: [
+          { text: "Sim, acesso remoto funcionando perfeitamente", target: "desfecho_alt_sucesso_remoto" },
+          { text: "Não temos acesso remoto ao equipamento", target: "desfecho_alt_wiki_cobranca" }
+        ]
+      },
+      alt_config_avancadas: {
+        tag: "Alterações / Avançadas",
+        title: "Acesso Remoto para Configurações Avançadas",
+        question: "É possível acessar remotamente o equipamento para as alterações avançadas?",
+        options: [
+          { text: "Sim, temos acesso remoto", target: "alt_funcionalidade_cpe" },
+          { text: "Não temos acesso remoto", target: "desfecho_n2_alteracoes" }
+        ]
+      },
+      alt_funcionalidade_cpe: {
+        tag: "Alterações / Funcionalidade",
+        title: "Modelo do Equipamento Possui o Recurso?",
+        question: "O modelo do CPE/Roteador possui a funcionalidade requisitada (ex: Controle de Horários, Restrição por MAC)?",
+        options: [
+          { text: "Sim, configurado com sucesso!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não possui a funcionalidade nativa", target: "alt_orientar_incompatibilidade" }
+        ]
+      },
+      alt_orientar_incompatibilidade: {
+        tag: "Alterações / Incompatibilidade",
+        title: "Orientar sobre Incompatibilidade",
+        question: "Oriente o cliente de que o modelo atual não dispõe desse recurso. O cliente compreendeu / ficou satisfeito?",
+        options: [
+          { text: "Sim, cliente compreendeu", target: "desfecho_normalizado_sucesso" },
+          { text: "Não compreendeu / quer troca de equipamento", target: "desfecho_alcance_acionar_recado" }
+        ]
+      },
+
+      /* ==========================================================================
+         MÓDULO: OUTRAS DEMANDAS / CANCELAMENTO
+         ========================================================================== */
+      outras_root: {
+        tag: "Outras Demandas",
+        title: "A Demanda é Solicitação de Cancelamento?",
+        question: "O cliente manifestou intenção de CANCELAMENTO do contrato?",
+        options: [
+          { text: "Sim, cliente solicita Cancelamento", target: "cancel_retencao" },
+          { text: "Não, trata-se de outra solicitação geral", target: "outras_buscar_manual" }
+        ]
+      },
+      cancel_retencao: {
+        tag: "Cancelamento",
+        title: "Tentativa de Retenção",
+        question: "Questione respeitosamente o motivo da insatisfação/cancelamento e tente a retenção do cliente. A retenção foi bem-sucedida?",
+        options: [
+          { text: "Sim, cliente optou por continuar!", target: "desfecho_normalizado_sucesso" },
+          { text: "Não, cliente insiste no cancelamento", target: "outras_buscar_manual" }
+        ]
+      },
+      outras_buscar_manual: {
+        tag: "Outras / Manual",
+        title: "Busca de Orientações no Manual do Provedor",
+        question: "Busque no Manual do Provedor orientações para a demanda em questão. Consta orientação específica escrita no manual?",
+        options: [
+          { text: "Sim, consta procedimento específico no manual", target: "desfecho_outras_seguir_manual" },
+          { text: "Não consta orientação clara no manual", target: "outras_posso_transferir" }
+        ]
+      },
+      outras_posso_transferir: {
+        tag: "Outras / Setor",
+        title: "Podemos Transferir ao Setor do Provedor?",
+        question: "Verifique o horário de atendimento do provedor. É possível transferir o atendimento agora para a equipe interna?",
+        options: [
+          { text: "Sim, dentro do expediente para transferência", target: "desfecho_outras_transferir" },
+          { text: "Não, fora do expediente ou sem fila no sistema", target: "outras_possui_processo" }
+        ]
+      },
+      outras_possui_processo: {
+        tag: "Outras / Registro",
+        title: "Existe Processo de 'Outras Demandas' no UPSoft?",
+        question: "No UPSoft deste provedor, existe tipo de processo/OS para 'Outras Demandas'?",
+        options: [
+          { text: "Sim, existe processo disponível", target: "desfecho_outras_abrir_os" },
+          { text: "Não existe processo no sistema", target: "desfecho_outras_recado_grupo" }
+        ]
+      },
+
+      /* ==========================================================================
+         DESFECHOS / RESULTADOS FINAIS
+         ========================================================================== */
+      desfecho_normalizado_sucesso: {
+        result: true,
+        type: "success",
+        title: "Atendimento Normalizado com Sucesso!",
+        action: "A conexão ou demanda foi concluída satisfatoriamente durante o atendimento. Registre o protocolo no UPSoft com o diagnóstico correspondente e finalize o contato de forma cordial.",
+        shortcutUsed: "Finalização Padrão"
+      },
+      desfecho_liberado_fatura: {
+        result: true,
+        type: "success",
+        title: "Liberação Provisória Concluída",
+        action: "Liberação efetuada com sucesso no sistema. Verifique se o cliente já possui a fatura com código de barras/PIX para pagamento e envie se o Manual do Provedor permitir.",
+        shortcutUsed: "Desbloqueio / Fatura"
+      },
+      desfecho_supervisao_financeiro: {
+        result: true,
+        type: "alert",
+        title: "Acionar Supervisão / Erro na Liberação",
+        action: "Houve erro ao processar a liberação no UPSoft. Acione imediatamente a Supervisão FELX e consulte as regras de contingência do Manual do Provedor.",
+        shortcutUsed: "Acionamento Supervisão"
+      },
+      desfecho_financeiro_orientar: {
+        result: true,
+        type: "warning",
+        title: "Orientar sobre Pagamento e Prazos",
+        action: "Cliente sem elegibilidade para liberação provisória. Oriente sobre as opções de pagamento (PIX/Boleto), canais de autoatendimento e prazo de compensação bancária conforme o Manual do Provedor.",
+        shortcutUsed: "Manual Financeiro"
+      },
+      desfecho_orientar_prazo_os: {
+        result: true,
+        type: "info",
+        title: "Demanda Já em Tratativa Técnica",
+        action: "Oriente o cliente sobre o número da O.S. já existente, prazo previsto de conclusão e informe que a equipe técnica já está com o chamado atribuído.",
+        shortcutUsed: "Acompanhamento O.S."
+      },
+      desfecho_n3_potencia: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N3 (Potência Óptica Inadequada)",
+        action: "Procedimento: Abertura imediata de chamado com o atalho <b>/n3</b>. Cole os valores de RX/TX coletados no UPSoft ('Verificar Fibra') e oriente o cliente sobre o prazo de visita técnica externa.",
+        shortcutUsed: "/n3"
+      },
+      desfecho_n3_linkloss: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N3 (Link Loss / LOS Vermelho)",
+        action: "Procedimento: Constatado rompimento de fibra ou perda óptica total (LOS vermelho). Abrir chamado com atalho <b>/n3</b>, anexar fotos/vídeo recebidos e informar o prazo de reparo.",
+        shortcutUsed: "/n3"
+      },
+      desfecho_n3_pon: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N3 (PON Piscando / Sem Autenticação)",
+        action: "Procedimento: O LED PON piscando indica falha na autorização na OLT ou atenuação limite. Abertura de chamado direto com atalho <b>/n3</b>.",
+        shortcutUsed: "/n3"
+      },
+      desfecho_n3_cabos: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N3 (Falha no Enlace WAN/LAN)",
+        action: "Procedimento: Cabos conferidos e porta WAN continua inoperante (possível porta queimada ou cabo de manobra danificado). Abrir chamado com atalho <b>/n3</b>.",
+        shortcutUsed: "/n3"
+      },
+      desfecho_n3_queimado: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N3 (Equipamento Apagado / Queimado)",
+        action: "Procedimento: Fonte e botão testados sem êxito. Abertura de chamado para troca de fonte/equipamento com atalho <b>/n3</b>.",
+        shortcutUsed: "/n3 & /aparelhoQueimado"
+      },
+      desfecho_n3_reset: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N3 (Equipamento Resetado)",
+        action: "Procedimento: Equipamento perdeu configurações de fábrica e não é permitida reconfiguração remota. Abertura de chamado com atalho <b>/n3</b> para visita presencial.",
+        shortcutUsed: "/n3 & /reset"
+      },
+      desfecho_n2_lentidao: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N2 (Lentidão sem Normalização)",
+        action: "Procedimento: Abrir chamado com o atalho <b>/n2</b>. Anote detalhadamente na descrição: uptime da ONT, canais 2.4/5GHz alterados, largura de banda, testes de velocidade homologados e dispositivos testados.",
+        shortcutUsed: "/n2"
+      },
+      desfecho_n2_sem_conexao: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N2 (Sem Conexão Persistente)",
+        action: "Procedimento: Equipamento alimentado, sem Link Loss, porém sem autenticação ou navegação após reinício. Abrir chamado com atalho <b>/n2</b> coletando logs de sessão.",
+        shortcutUsed: "/n2"
+      },
+      desfecho_n2_site: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N2 (Rota / DNS de Site)",
+        action: "Procedimento: Abrir chamado com atalho <b>/n2</b> informando a URL do site afetado, IP do cliente, teste de ping/traceroute caso disponível e confirmação de DNS testado.",
+        shortcutUsed: "/n2"
+      },
+      desfecho_n2_alteracoes: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N2 (Configuração Avançada)",
+        action: "Procedimento: Abrir chamado com atalho <b>/n2</b> especificando os parâmetros avançados requisitados pelo assinante para intervenção técnica interna.",
+        shortcutUsed: "/n2"
+      },
+      desfecho_n2_quedas: {
+        result: true,
+        type: "alert",
+        title: "Abertura de Chamado N2 (Quedas Recorrentes)",
+        action: "Procedimento: Abrir chamado com atalho <b>/n2</b> informando os registros de oscilação do UPSoft e horários críticos relatados pelo cliente.",
+        shortcutUsed: "/n2"
+      },
+      desfecho_tvbox_anatel: {
+        result: true,
+        type: "warning",
+        title: "Orientações ANATEL (TVBox Não Homologada)",
+        action: "Procedimento: Utilizar o atalho <b>/tvbox</b> e orientar o assinante sobre o cumprimento das ordens judiciais e regulamentares da ANATEL que efetuam bloqueios de dispositivos piratas não homologados.",
+        shortcutUsed: "/tvbox"
+      },
+      desfecho_tvbox_chamado: {
+        result: true,
+        type: "info",
+        title: "Abertura de Chamado / Wiki TVBox",
+        action: "Procedimento: Encaminhar o caso conforme instruções da Wiki do Provedor para suporte de streaming/TVBox homologada.",
+        shortcutUsed: "Wiki Provedor"
+      },
+      desfecho_site_instavel_externo: {
+        result: true,
+        type: "info",
+        title: "Instabilidade Própria da Plataforma / Site",
+        action: "Procedimento: Orientar o cliente de que o site/aplicativo encontra-se com instabilidade geral nos servidores do próprio desenvolvedor (conferido via DownDetector). Conexão do provedor operando perfeitamente.",
+        shortcutUsed: "DownDetector"
+      },
+      desfecho_alcance_encaminhar_mesh: {
+        result: true,
+        type: "info",
+        title: "Encaminhamento para Solução Mesh / Ponto Adicional",
+        action: "Procedimento: Encaminhar o cliente para a equipe comercial/técnica do provedor para adesão de Ponto de Acesso Mesh ou cabo de rede, conforme orientações da Wiki.",
+        shortcutUsed: "Wiki Repetidores"
+      },
+      desfecho_alcance_acionar_recado: {
+        result: true,
+        type: "warning",
+        title: "Acionar Provedor via Recado no Grupo",
+        action: "Procedimento: Coletar todas as especificidades do imóvel e enviar recado para o provedor para análise de exceção comercial (mudança de ponto da ONT ou fornecimento de AP extra).",
+        shortcutUsed: "Recado Grupo Provedor"
+      },
+      desfecho_alt_sucesso_remoto: {
+        result: true,
+        type: "success",
+        title: "SSID e Senha Alterados com Sucesso!",
+        action: "Alteração realizada diretamente via Acesso Remoto no roteador. Informe as novas credenciais ao cliente, alerte que todos os dispositivos precisarão reconectar com a nova senha e encerre o protocolo.",
+        shortcutUsed: "Acesso Remoto CPE"
+      },
+      desfecho_alt_wiki_cobranca: {
+        result: true,
+        type: "info",
+        title: "Encaminhamento conforme Wiki (Troca Presencial)",
+        action: "Procedimento: Sem acesso remoto ao equipamento. Consulte a Wiki do Provedor no tópico: 'Se não tivermos acesso para trocar a senha e seja necessário abrir OS, é cobrado e qual valor?' e oriente o cliente antes do agendamento.",
+        shortcutUsed: "Wiki Cobrança OS"
+      },
+      desfecho_outras_seguir_manual: {
+        result: true,
+        type: "info",
+        title: "Seguir Instrução Específica do Manual",
+        action: "Procedimento: Execute o direcionamento localizado na Wiki. Caso haja necessidade de registrar no sistema, utilize o atalho <b>/outrasDemandas</b>.",
+        shortcutUsed: "/outrasDemandas"
+      },
+      desfecho_outras_transferir: {
+        result: true,
+        type: "info",
+        title: "Transferência ao Setor Responsável",
+        action: "Procedimento: Levante o máximo de dados sobre o caso, anote no atendimento do UPSoft e realize a transferência para o setor interno responsável do provedor.",
+        shortcutUsed: "Transferência Chat"
+      },
+      desfecho_outras_abrir_os: {
+        result: true,
+        type: "warning",
+        title: "Abertura de O.S. de Outras Demandas",
+        action: "Procedimento: Coletar o máximo de informações possíveis e abrir O.S. de Outras Demandas no UPSoft, informando explicitamente que não constavam diretrizes no manual para atendimento fora de expediente.",
+        shortcutUsed: "O.S. Outras Demandas"
+      },
+      desfecho_outras_recado_grupo: {
+        result: true,
+        type: "warning",
+        title: "Encaminhamento de Recado no Grupo Oficial",
+        action: "Procedimento: Encerrar o atendimento no UPSoft registrando o diagnóstico adequado e direcionar recado completo no grupo de comunicação com o provedor (informando o retorno no próximo dia útil).",
+        shortcutUsed: "Recado no Grupo"
+      }
+    };
+
+    /* Interactive History State */
+    let triageHistory = [];
+    let currentStepKey = 'start';
+
+    function renderStep(key) {
+      currentStepKey = key;
+      const step = stepsData[key];
+      const container = document.getElementById('simStepContainer');
+      const undoBtn = document.getElementById('undoBtn');
+
+      if (triageHistory.length > 0) {
+        undoBtn.classList.remove('hidden');
+      } else {
+        undoBtn.classList.add('hidden');
+      }
+
+      if (!step) {
+        container.innerHTML = `<div class="text-rose-400 text-sm">Erro: Etapa não encontrada (${key}).</div>`;
+        return;
+      }
+
+      // If it's a conclusion/result node
+      if (step.result) {
+        let badgeStyle = "bg-emerald-500/15 text-emerald-400 border-emerald-500/30";
+        let iconSvg = `<svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
+
+        if (step.type === 'alert') {
+          badgeStyle = "bg-rose-500/15 text-rose-400 border-rose-500/30";
+          iconSvg = `<svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>`;
+        } else if (step.type === 'warning') {
+          badgeStyle = "bg-amber-500/15 text-amber-400 border-amber-500/30";
+          iconSvg = `<svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`;
+        } else if (step.type === 'info') {
+          badgeStyle = "bg-sky-500/15 text-sky-400 border-sky-500/30";
+          iconSvg = `<svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`;
+        }
+
+        container.innerHTML = `
+          <div class="p-6 sm:p-7 rounded-2xl border ${badgeStyle} space-y-4 bg-felx-petrolDarker/90 backdrop-blur">
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-xl bg-felx-petrolCard border border-white/5">
+                ${iconSvg}
+              </div>
+              <div>
+                <span class="text-[11px] uppercase tracking-wider font-extrabold text-slate-400">Desfecho do Atendimento FELX</span>
+                <h3 class="text-lg font-extrabold text-white">${step.title}</h3>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-felx-petrolDarkest/80 border border-white/10 text-sm text-slate-200 leading-relaxed">
+              ${step.action}
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+              <span class="text-xs font-mono text-felx-teal bg-felx-petrolCard px-3 py-1.5 rounded-lg border border-felx-teal/20">
+                Atalho / Ação: ${step.shortcutUsed || 'N/A'}
+              </span>
+
+              <button onclick="resetSimulator()" class="px-4 py-2 bg-felx-petrolCard hover:bg-felx-petrolHover text-slate-200 text-xs font-semibold rounded-xl border border-felx-petrolBorder transition-all flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-felx-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                Iniciar Nova Triagem
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      // Normal Question Step
+      let html = `
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-felx-tealMuted text-felx-teal border border-felx-teal/30">
+              ${step.tag}
+            </span>
+            <span class="text-xs text-slate-400 font-medium">· ${step.title}</span>
+          </div>
+
+          <p class="text-base sm:text-lg font-semibold text-white leading-snug">
+            ${step.question}
+          </p>
+      `;
+
+      if (step.tip) {
+        html += `
+          <div class="p-3 bg-felx-petrolCard/80 border border-felx-petrolBorder rounded-xl text-xs text-slate-300 flex items-start gap-2">
+            <svg class="w-4 h-4 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>${step.tip}</span>
+          </div>
+        `;
+      }
+
+      html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">`;
+
+      step.options.forEach(opt => {
+        html += `
+          <button onclick="chooseOption('${key}', '${opt.text.replace(/'/g, "\\'")}', '${opt.target}')" 
+            class="w-full text-left p-4 rounded-xl bg-felx-petrolCard hover:bg-felx-petrolHover border border-felx-petrolBorder hover:border-felx-teal text-slate-100 font-semibold text-xs sm:text-sm transition-all group flex items-center justify-between shadow-sm">
+            <span>${opt.text}</span>
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-felx-teal transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        `;
+      });
+
+      html += `</div></div>`;
+      container.innerHTML = html;
+    }
+
+    function chooseOption(stepKey, optionText, nextKey) {
+      triageHistory.push({
+        stepKey: stepKey,
+        question: stepsData[stepKey].question.replace(/<[^>]*>?/gm, ''),
+        choice: optionText,
+        nextKey: nextKey
+      });
+      updateHistoryUI();
+      renderStep(nextKey);
+    }
+
+    function undoStep() {
+      if (triageHistory.length === 0) return;
+      const last = triageHistory.pop();
+      updateHistoryUI();
+      renderStep(last.stepKey);
+    }
+
+    function jumpToRoute(routeKey) {
+      triageHistory.push({
+        stepKey: currentStepKey,
+        question: `Salto Direto para o Módulo`,
+        choice: routeKey,
+        nextKey: routeKey
+      });
+      updateHistoryUI();
+      renderStep(routeKey);
+    }
+
+    function updateHistoryUI() {
+      const list = document.getElementById('simHistoryList');
+      const emptyMsg = document.getElementById('simHistoryEmpty');
+      const counter = document.getElementById('stepCounter');
+
+      counter.textContent = `Etapas: ${triageHistory.length}`;
+
+      if (triageHistory.length === 0) {
+        emptyMsg.classList.remove('hidden');
+        list.innerHTML = '';
+        return;
+      }
+
+      emptyMsg.classList.add('hidden');
+      list.innerHTML = '';
+
+      triageHistory.forEach((h) => {
+        const li = document.createElement('li');
+        li.className = "py-1 border-b border-felx-petrolBorder/40 last:border-0";
+        li.innerHTML = `<span class="text-slate-400 font-medium">${h.question}</span> ➔ <span class="text-felx-teal font-bold">${h.choice}</span>`;
+        list.appendChild(li);
+      });
+    }
+
+    function resetSimulator() {
+      triageHistory = [];
+      updateHistoryUI();
+      renderStep('start');
+      document.getElementById('quickRouteSelect').value = 'start';
+    }
+
+    /* Initialization */
+    window.addEventListener('DOMContentLoaded', () => {
+      renderStep('start');
+    });
+  </script>
+</body>
+</html>
