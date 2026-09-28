@@ -274,7 +274,7 @@
         question: "No UPSoft, clique em 'Verificar Fibra'. A Potência Óptica (RX/TX) está inadequada / fora do padrão tolerado?",
         options: [
           { text: "Sim, potência inadequada (alta atenuação)", target: "desfecho_n3_potencia" },
-          { text: "Não, potência óptica está normal", target: "lentidao_reinicio" }
+          { text: "Não, potência óptica está normal ou indisponível para consulta", target: "lentidao_reinicio" }
         ]
       },
       lentidao_reinicio: {
@@ -576,7 +576,7 @@
         question: "Verifique a Potência Óptica no UPSoft. A fibra apresenta potência inadequada ou oscilação brusca?",
         options: [
           { text: "Sim, potência óptica inadequada", target: "desfecho_n3_potencia" },
-          { text: "Não, sinal óptico está estável", target: "quedas_reinicio" }
+          { text: "Não, sinal óptico está estável ou indisponível para consulta", target: "quedas_reinicio" }
         ]
       },
       quedas_reinicio: {
