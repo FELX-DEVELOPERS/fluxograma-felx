@@ -289,7 +289,7 @@
       lentidao_teste_velocidade: {
         tag: "Lentidão / Medição",
         title: "Teste de Velocidade Homologado",
-        question: "Envie o atalho <code>/teste</code> e instrua o teste preferencialmente via cabo de rede ou na rede 5GHz bem próximo à ONT. A velocidade atingiu o contratado?",
+        question: "Envie o atalho <code>/testeVelocidade</code> e instrua o teste preferencialmente via cabo de rede ou na rede 5GHz bem próximo à ONT. A velocidade atingiu o contratado?",
         options: [
           { text: "Sim, teste ok / normalizado", target: "desfecho_normalizado_sucesso" },
           { text: "Não, taxa continua abaixo do plano", target: "lentidao_acesso_remoto" }
@@ -298,8 +298,8 @@
       lentidao_acesso_remoto: {
         tag: "Lentidão / Configuração Remota",
         title: "Acesso Remoto: DNS, Canais e Largura",
-        question: "Efetue o Acesso Remoto ao roteador/ONT. Altere o DNS para 8.8.8.8 / 1.1.1.1, ajuste a largura em 20MHz (2.4GHz) e canal menos congestionado. Realizado novo teste, normalizou?",
-        tip: "Anote todos os canais anteriores, uptime e DNS na descrição do atendimento.",
+        question: "Efetue o Acesso Remoto ao roteador/ONT. Realize as análises necessárias no DNS, WiFi (Canal e Largura de Banda), Dispositivos Conectados, etc. Efetue um novo teste, normalizou?",
+        tip: "Anote todos os canais anteriores, uptime, equipamentos conectados e DNS na descrição do atendimento.",
         options: [
           { text: "Sim, normalizou após os ajustes!", target: "desfecho_normalizado_sucesso" },
           { text: "Não normalizou / continua lento", target: "desfecho_n2_lentidao" }
